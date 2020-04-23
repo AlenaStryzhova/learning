@@ -1,0 +1,34 @@
+// https://www.codewars.com/kata/basic-mathematical-operations
+
+// Кратчайший вариант
+
+function basicOp(operation, value1, value2)
+{
+  return eval(value1 + operation + value2);
+}
+
+
+// Первый вариант, о котором я подумала
+
+function basicOp(operation, value1, value2)
+{
+  var res;
+  switch (operation) {
+    case '+':
+    res = value1 + value2;
+    break;
+    
+    case '-':
+    res = value1 - value2;
+    break;
+    
+    case '*':
+    res = value1 * value2;
+    break;
+    
+    case '/':
+    res = value1 / value2;
+    break;
+  }
+  return res;
+}

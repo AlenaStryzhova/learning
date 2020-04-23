@@ -1,0 +1,7 @@
+// https://www.codewars.com/kata/remove-first-and-last-character-part-two
+
+function array(arr){
+  let myArr = arr.split(',');
+  if (myArr.length<=2) return null;
+  else return (myArr.slice(1, myArr.length).length).toString();
+}

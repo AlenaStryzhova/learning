@@ -1,0 +1,11 @@
+
+// http://www.codewars.com/kata/word-count 
+// Я додумалась только до регулярных выражений
+ 
+ function countWords(str) {
+    if (str.length == 0) return 0;
+    else {
+      let arr = str.replace(/[(?!#@$%,?)]/g, " ").replace(/\s+/g, " ").trim().split(" ");
+      return arr.length;
+    }
+  }

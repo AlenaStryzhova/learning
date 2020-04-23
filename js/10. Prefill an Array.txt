@@ -1,0 +1,30 @@
+// https://www.codewars.com/kata/prefill-an-array
+
+// Первый вариант, пришедший в голову. Признаюсь сразу - фишку с ошибкой подсмотрела,ибо не знала как это делать.
+
+function prefill(n, v) {
+  if (! +n || n<0 ) {
+  let TypeError = new Error;
+    TypeError.name = "TypeError";
+    TypeError.message = n + " is invalid";
+    throw TypeError
+  }
+  let arr = [];
+  if (n==0) return arr;
+  arr.length = +n;
+  return arr.fill(v);
+}
+
+
+// Потом поняла, что можно чище:
+
+function prefill(n, v) {
+  if (! +n || n<0 ) {
+  let TypeError = new Error;
+    TypeError.name = "TypeError";
+    TypeError.message = n + " is invalid";
+    throw TypeError
+  }
+  if (n==0) return arr;
+  return new Array(n).fill(v);
+}

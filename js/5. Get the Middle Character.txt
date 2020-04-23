@@ -1,0 +1,25 @@
+// https://www.codewars.com/kata/get-the-middle-character
+
+// Первый вариант
+
+function getMiddle(s)
+{
+  var len = s.length;
+  if (len%2 == 0) {
+    return s.substring(len/2 - 1, len-len/2 + 1);
+  } else {
+    return s.substring(len/2 + 1, len-len/2);
+  }
+}
+
+// Второй вариант
+
+function getMiddle(s)
+{
+  var len = s.length;
+  if (len%2 == 0) {
+    return s.charAt(len/2-1)+s.charAt(len/2);
+  } else {
+    return s.charAt(len/2);
+  }
+}

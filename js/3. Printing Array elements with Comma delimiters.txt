@@ -1,0 +1,11 @@
+//https://www.codewars.com/kata/printing-array-elements-with-comma-delimiters
+
+function printArray(array){
+  return array.toString();
+}
+
+// Ну или так
+
+function printArray(array){
+  return String(array);
+}

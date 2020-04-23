@@ -1,0 +1,28 @@
+// https://www.codewars.com/kata/transportation-on-vacation
+
+
+function rentalCarCost(d) {
+  var sum;
+  if ( d <=2 ) { sum = d*40 }
+  if ( d >= 3 && d <=6 ) { sum = d*40-20 }
+  if ( d >= 7  ) { sum = d*40-50 }
+  return sum;
+}
+
+
+// Можно и так написать (скажите, по какому принципу лучше, быстрее или понятнее?)
+
+function rentalCarCost(d) {
+  if ( d <=2 ) return d*40; 
+  if ( d >= 3 && d <=6 ) return d*40-20;
+  if ( d >= 7 ) return d*40-50;
+}
+
+
+// Могу и так
+
+function rentalCarCost(d) {
+  var sum;
+  d<3 ? sum = d*40 : d > 2 && d < 7 ? sum = d*40-20 : sum = d*40-50;
+  return sum;
+}
